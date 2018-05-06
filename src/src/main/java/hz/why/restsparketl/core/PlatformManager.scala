@@ -8,19 +8,20 @@ import org.apache.spark.sql.SparkSession
   * Created by wuheyi on 2018/5/6.
   */
 object PlatformManager {
+  /**
+    * spring boot调用spark的测试例子
+    * @return
+    */
   def start_simple_application(): Long = {
-    val conf = new SparkConf().setAppName("mySpark")
-    //setMaster("local") 本机的spark就用local，远端的就写ip
-    //如果是打成jar包运行则需要去掉 setMaster("local")因为在参数中会指定。
+    val conf = new SparkConf()
     conf.setMaster("local")
-
     val spark = SparkSession
       .builder
       .config(conf)
-      .appName("StructuredKafkaWordCount")
+      .appName("simple application")
       .getOrCreate()
     spark.sparkContext.setLogLevel("WARN")
-    val rdd = spark.sparkContext.parallelize(List("shenzhen", "is a beautiful city"))
+    val rdd = spark.sparkContext.parallelize(List("hangzhou", "is a beautiful city"))
     rdd.count()
   }
 

@@ -11,11 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EntryController {
-
     @RequestMapping("/entry")
-    public String greeting(@RequestParam(value="name", defaultValue="World") String name) {
+    public String test(@RequestParam(value="name", defaultValue="World") String name) {
         Long rdd_count = PlatformManager.start_simple_application();
-
-        return "hello entry" + rdd_count;
+        return "rdd count :" + rdd_count;
     }
 }
