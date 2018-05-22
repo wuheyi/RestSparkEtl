@@ -57,6 +57,14 @@
 			<artifactId>spark-streaming_${scala.version}</artifactId>
 			<version>${spark.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
+		<dependency>
+			<groupId>org.antlr</groupId>
+			<artifactId>antlr4-runtime</artifactId>
+			<version>4.7.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

@@ -1,1 +1,4 @@
 .idea
+src/src/main/java/hz/why/restsparketl/dsl/resources/.gitignore
+target/
+
