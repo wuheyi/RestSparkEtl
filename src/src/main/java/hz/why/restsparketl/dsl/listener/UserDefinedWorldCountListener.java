@@ -31,23 +31,47 @@ public class UserDefinedWorldCountListener extends WorldCountBaseListener {
     }
 
     @Override
-    public void enterExpr(WorldCountParser.ExprContext ctx) {
-        super.enterExpr(ctx);
+    public void enterCreate(WorldCountParser.CreateContext ctx) {
+        super.enterCreate(ctx);
     }
 
     @Override
-    public void exitExpr(WorldCountParser.ExprContext ctx) {
-        super.exitExpr(ctx);
+    public void exitCreate(WorldCountParser.CreateContext ctx) {
+        System.out.println(ctx.TABLENAME());
+        System.out.println(ctx.FILETYPE());
+        System.out.println(ctx.path().BACKQUOTED_IDENTIFIER());
+
+        super.exitCreate(ctx);
     }
 
     @Override
-    public void enterFiledir(WorldCountParser.FiledirContext ctx) {
-        super.enterFiledir(ctx);
+    public void enterShow(WorldCountParser.ShowContext ctx) {
+        super.enterShow(ctx);
     }
 
     @Override
-    public void exitFiledir(WorldCountParser.FiledirContext ctx) {
-        super.exitFiledir(ctx);
+    public void exitShow(WorldCountParser.ShowContext ctx) {
+        super.exitShow(ctx);
+    }
+
+    @Override
+    public void enterCount(WorldCountParser.CountContext ctx) {
+        super.enterCount(ctx);
+    }
+
+    @Override
+    public void exitCount(WorldCountParser.CountContext ctx) {
+        super.exitCount(ctx);
+    }
+
+    @Override
+    public void enterPath(WorldCountParser.PathContext ctx) {
+        super.enterPath(ctx);
+    }
+
+    @Override
+    public void exitPath(WorldCountParser.PathContext ctx) {
+        super.exitPath(ctx);
     }
 
     @Override

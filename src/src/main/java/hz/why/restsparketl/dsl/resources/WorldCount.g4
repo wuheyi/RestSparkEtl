@@ -6,26 +6,27 @@ prog: stat
 stat: expr
 ;
 
-expr: 'create' FILETYPE'.'filedir 'as' TABLENAME
-| 'show' NUM TABLENAME
-| 'count' TABLENAME
+expr: 'create' FILETYPE'.'path 'as' TABLENAME       #create
+| 'show' NUM TABLENAME                              #show
+| 'count' TABLENAME                                 #count
 ;
 
+
+path: BACKQUOTED_IDENTIFIER
+;
 
 FILETYPE: 'csv'|'text'
-;
-
-filedir: FILENAME'.'FILETYPE
 ;
 
 TABLENAME: ('a'..'z'|'A'..'Z')+
 ;
 
-FILENAME: ('a'..'z'|'A'..'Z')+
-;
-
 NUM: '0'..'9'+
 ;
+
+BACKQUOTED_IDENTIFIER
+    : '`' ( ~'`' | '``' )* '`'
+    ;
 
 WS:(' '|'\t'|'\n'|'\r')+{skip();};
 

@@ -1,4 +1,4 @@
-// Generated from /Users/wuheyi/IdeaProjects/RestSparkEtl/src/src/main/java/hz/why/restsparketl/dsl/resources/WorldCount.g4 by ANTLR 4.7
+// Generated from /Users/dxy_why/Documents/workspace/RestSparkEtl/src/src/main/java/hz/why/restsparketl/dsl/resources/WorldCount.g4 by ANTLR 4.7
 package hz.why.restsparketl.dsl.parser;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -40,25 +40,49 @@ public class WorldCountBaseListener implements WorldCountListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpr(WorldCountParser.ExprContext ctx) { }
+	@Override public void enterCreate(WorldCountParser.CreateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpr(WorldCountParser.ExprContext ctx) { }
+	@Override public void exitCreate(WorldCountParser.CreateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFiledir(WorldCountParser.FiledirContext ctx) { }
+	@Override public void enterShow(WorldCountParser.ShowContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFiledir(WorldCountParser.FiledirContext ctx) { }
+	@Override public void exitShow(WorldCountParser.ShowContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCount(WorldCountParser.CountContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCount(WorldCountParser.CountContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPath(WorldCountParser.PathContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPath(WorldCountParser.PathContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
